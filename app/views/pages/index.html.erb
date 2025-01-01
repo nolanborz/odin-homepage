@@ -1,7 +1,9 @@
 <main class="portfolio">
   <header class="intro">
-    <%= image_tag "nolanprof.jpeg", class: "profile-img" %>
-    <h1 class="my-name">Nolan<br>Borzoni</h1>
+    <div class="prof-pic-div">
+      <%= image_tag "nolanprof.jpeg", class: "profile-img" %>
+    </div>
+    <h1 class="my-name">Nolan Borzoni</h1>
     <section class="about-me">
       <h2 class="about-me-text">About me</h2>
       <p>My name is Nolan and I am a full stack software developer.
@@ -127,15 +129,13 @@
   </section>
   
   <footer class="contact">
-
     <p>Please get in touch if you think our work could be mutually beneficial!</p>
-    <p>1234 Random Road</p>
-    <p>Random Town, California 12345</p>
-    <div>
+    <p class="address">1234 Random Road, <br>Random Town, California 12345</p>
+    <div class="contact-info">
       <img class="contact-icon" src="assets/phone.svg" alt="Phone icon">
       <p>555-555-5555</p>
     </div>
-    <div>
+    <div class="contact-info">
       <img class="contact-icon" src="assets/email.svg" alt="Email icon"">
       <p>not.a.real.email@gmail.com</p>
     </div>

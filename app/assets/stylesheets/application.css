@@ -1,15 +1,43 @@
 body {
+  background-color: rgb(86, 127, 86);
   font-family: 'Roboto', sans-serif;
 }
 .my-name, .about-me-text {
   font-family: 'Playfair Display', serif;
 }
-/* mobile layout default stuff */
+
+/* mobile layout aka default styles*/
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .profile-img {
-  justify-content: center;
-  width: 300px;
+  width: 275px;
   height: auto;
+}
+
+.prof-pic-div {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.prof-pic-div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: antiquewhite;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  z-index: -1;
 }
 
 h1 {
@@ -18,6 +46,8 @@ h1 {
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .about-me-text {
@@ -26,7 +56,8 @@ h1 {
 
 .about-me p {
   text-align: left;
-  padding: 0 10px;
+  padding: 0;
+  margin: 0;
 }
 .about-me {
   margin-top: 0;
@@ -34,12 +65,11 @@ h1 {
   text-align: center;
   align-items: center;
 }
-.program-icons {
+.tech-stack {
   display: flex;
   justify-content: center;
   gap: 15px;
   padding: 0;
-
 }
 .icons {
   max-height: 30px;
@@ -50,12 +80,10 @@ h1 {
   max-width: 30px;
 }
 
-.middle-content h2 {
-  margin: 0;
-  padding: 0;
+h2 {
   text-align: left;
-  max-width: 300px;
-  margin: 0 auto;
+  margin-bottom: -20px;
+  padding: 0;
 }
 
 .projects {
@@ -106,16 +134,22 @@ h1 {
   padding-right: 15px;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+}
+
 .sample-bot-text p {
   padding: 10px;
 }
 
-.contact-sections {
+.contact-info {
   display: flex;
-  justify-content: left;
+  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
-  margin: 0.5rem;
+  gap: 10px;
 }
 .contact-icon {
   height: 30px;
@@ -125,6 +159,9 @@ h1 {
   gap: 1rem;
   margin: 1rem 0;
 }
+.address{
+  margin-bottom: 0;
+}
 
 .sns-icons {
   display: flex;
@@ -132,14 +169,12 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  margin-bottom: 1rem;
 }
 
 .bot-profile-img {
+  justify-content: center;
+  align-self: center;
   width: 300px;
   height: auto;
-}
-
-.contact {
-  text-align: left;
-  padding: 1rem;
 }

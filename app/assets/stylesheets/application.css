@@ -136,12 +136,14 @@ body {
   padding: 1rem;
   text-align: center;
   align-items: center;
+  padding-bottom: 0;
 }
 .program-icons {
   display: flex;
   justify-content: center;
   gap: 15px;
   padding: 1rem;
+  padding-top: 0px;
 
 }
 .icons {
@@ -168,12 +170,20 @@ body {
 }
 
 .project-icons {
-  align-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  
 }
 
 .project-icon {
   height: 30px;
   width: auto;
+}
+
+.project-description {
+  margin-top: 0;
 }
 
 .sample-top {

@@ -1,166 +1,44 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
 body {
   font-family: 'Roboto', sans-serif;
-}
-
-/* tablet styles */
-@media screen and (min-width: 768px) {
-  .grid-container-flex {
-    padding: 2rem;
-  }
-
-  .top-content {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .top-prof-img img {
-    width: 300px;
-  }
-
-  .program-icons {
-    justify-content: center;
-    gap: 1.5rem;
-  }
-
-  .middle-content h2 {
-    margin: 0;  /* Removes centering on larger screens */
-    padding-left: calc((100% - 600px - 2rem) / 2);  /* Aligns with first project in 2-column layout */
-  }
-
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
-    gap: 2rem;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-  .project-sample {
-  }
-}
-
-/* desktop styles */
-@media screen and (min-width: 1024px) {
-  .grid-container-flex {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .middle-content h2 {
-    padding-left: calc((100% - 900px - 4rem) / 2);  /* Aligns with first project in 3-column layout */
-  }
-
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0;
-    padding: 0;
-  }
-  
-  .bottom-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-  }
-  
-  .bot-prof-img img {
-    width: 300px;
-  }
-}
-/* mobile layout default stuff */
-
-.grid-container-flex {
-  display: flex;
-  flex-direction: column;
-  background-color:aliceblue;
-  
-}
-.grid-container-grid {
-  display: grid;
-  grid-template-columns: 20em;
-  height: 8em;
-  font-size: 1.1rem;
-}
-
-.top-top-section {
-  position: relative;
-  overflow: hidden;
-}
-
-.top-top-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100px;  /* Extend beyond screen edge */
-  right: -100px;  /* Extend beyond screen edge */
-  height: 200%;
-  background: linear-gradient(170deg,
-  #3B82F6 33%,
-  rgba(59, 130, 246, 0.3) 33%,
-  transparent 34%
-  );
-  transform-origin: left;  /* Adjust angle as needed */
-  z-index: 0;  /* Places it behind content */
-}
-
-
-.top-prof-img {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-
-
-}
-.top-prof-img img {
-  width: 200px;
-  height: auto;
-}
-.my-name {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  font-size: 3rem;
-  margin-bottom: 0;
-  z-index: 1;
 }
 .my-name, .about-me-text {
   font-family: 'Playfair Display', serif;
 }
+/* mobile layout default stuff */
+
+.profile-img {
+  justify-content: center;
+  width: 300px;
+  height: auto;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2.5rem;
+}
+
+.about-me-text {
+  margin: 0;
+}
 
 .about-me p {
   text-align: left;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 .about-me {
-  padding: 1rem;
+  margin-top: 0;
+  padding: 0;
   text-align: center;
   align-items: center;
-  padding-bottom: 0;
 }
 .program-icons {
   display: flex;
   justify-content: center;
   gap: 15px;
-  padding: 1rem;
-  padding-top: 0px;
+  padding: 0;
 
 }
 .icons {
@@ -172,16 +50,12 @@ body {
   max-width: 30px;
 }
 
-.projects-header {
-  font-family: 'Playfair Display', serif;
-}
-
 .middle-content h2 {
   margin: 0;
-  padding: 0 0 1rem 0;  /* Adds some space below the header */
+  padding: 0;
   text-align: left;
-  max-width: 300px;  /* Same width as project-sample */
-  margin: 0 auto;  /* Centers it on mobile */
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .projects {
@@ -192,6 +66,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .project-sample {
   height: 350px;
   width: 300px;
@@ -204,7 +79,6 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  
 }
 
 .project-icon {
@@ -260,18 +134,12 @@ body {
   gap: 2rem;
 }
 
-.bot-prof-img {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-
-}
-.bot-prof-img img {
-  width: 200px;
+.bot-profile-img {
+  width: 300px;
   height: auto;
 }
 
-.bottom-content {
+.contact {
   text-align: left;
   padding: 1rem;
 }

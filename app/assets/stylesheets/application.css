@@ -36,10 +36,21 @@ body {
     justify-content: center;
     gap: 1.5rem;
   }
+
+  .middle-content h2 {
+    margin: 0;  /* Removes centering on larger screens */
+    padding-left: calc((100% - 600px - 2rem) / 2);  /* Aligns with first project in 2-column layout */
+  }
+
   .projects {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, 300px);
     gap: 2rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .project-sample {
   }
 }
 
@@ -49,9 +60,15 @@ body {
     max-width: 1200px;
     margin: 0 auto;
   }
+  
+  .middle-content h2 {
+    padding-left: calc((100% - 900px - 4rem) / 2);  /* Aligns with first project in 3-column layout */
+  }
 
   .projects {
     grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    padding: 0;
   }
   
   .bottom-content {
@@ -157,10 +174,23 @@ body {
 
 .projects-header {
   font-family: 'Playfair Display', serif;
-  margin-bottom: 0px;
 }
+
+.middle-content h2 {
+  margin: 0;
+  padding: 0 0 1rem 0;  /* Adds some space below the header */
+  text-align: left;
+  max-width: 300px;  /* Same width as project-sample */
+  margin: 0 auto;  /* Centers it on mobile */
+}
+
 .projects {
-  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 2rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 .project-sample {
   height: 350px;

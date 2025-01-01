@@ -17,14 +17,53 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.main-container {
+/* tablet styles */
+@media screen and (min-width: 768px) {
+  .grid-container-flex {
+    padding: 2rem;
+  }
+}
+/* mobile layout default stuff */
+.grid-container-flex {
   display: flex;
   flex-direction: column;
+  background-color:aliceblue;
+  
+}
+.grid-container-grid {
+  display: grid;
+  grid-template-columns: 20em;
+  height: 8em;
+  font-size: 1.1rem;
 }
 
+.top-top-section {
+  position: relative;
+}
+.top-prof-img {
+  display: flex;
+  justify-content: center;
+
+}
 .top-prof-img img {
   width: 200px;
   height: auto;
+}
+.my-name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+.my-name, .about-me-text {
+  font-family: 'Playfair Display', serif;
+}
+
+.about-me {
+  align-items: center;
 }
 .program-icons {
   display: flex;
@@ -38,7 +77,47 @@ body {
   max-width: 30px;
 }
 
+.project-sample {
+  height: 350px;
+  width: 300px;
+  background-color:antiquewhite;
+  border: black 2px dotted;
+}
+
+.project-icons {
+  align-content: center;
+}
+
 .project-icon {
-  max-height: 30px;
-  max-width: 30px;
+  height: 30px;
+  width: auto;
+}
+
+.sample-top {
+  width: 300px;
+  height: 200px;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sample-bot-header {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.contact-sections {
+  display: flex;
+  align-items: center;
+}
+.contact-icon {
+  height: 30px;
+  width: 30px;
+}
+.bot-prof-img img {
+  width: 200px;
+  height: auto;
 }

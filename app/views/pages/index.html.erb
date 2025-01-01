@@ -1,13 +1,13 @@
-<div class="main-container">
+<div class="grid-container-flex">
   <div class="top-content">
     
     <div class="top-top-section">
       <div class="top-prof-img"><%= image_tag "nolanprof.jpeg" %></div>
-      <h1>Nolan Borzoni</h1>
+      <h1 class="my-name">Nolan<br>Borzoni</h1>
     </div>
     <div class="top-bottom-section">
       <div class="about-me">
-        <h2>About me</h2>
+        <h1 class="about-me-text">About me</h1>
         <p>Hi, my name is Nolan and I am a full stack software developer.
           My best work is done with the Ruby on Rails framework using
           Ruby, Javascript, and Tailwind. I've conducted my learning
@@ -37,16 +37,39 @@
               <img class="project-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
             </div>
           </div>
+          <div class="sample-bot-text">
+            <p>This is a concise description of the displayed project.
+              It has about two lines of text.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="bottom-content">
-    <div class="contact-icons">
-      <img class="bot-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
-      <img class="bot-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg" />
-      <img class="bot-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
+    <div class="bottom-top">
+      <div>
+        <p>Please get in touch if you think our work could be mutually beneficial!</p>
+      </div>
+      <div>
+        <p>1234 Random Road</p>
+        <p>Random Town, California 12345</p>
+      </div>
+      <div class="contact-sections">
+        <img class="contact-icon" src="assets/phone.svg" alt="Phone icon">
+        <p>555-555-5555</p>
+      </div>
+      <div class="contact-sections">
+        <img class="contact-icon" src="assets/email.svg" alt="Email icon"">
+        <p>not.a.real.email@gmail.com</p>
+      </div>
+      <div class="contact-icons">
+        <img class="bot-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
+        <img class="bot-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg" />
+        <img class="bot-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
+      </div>
     </div>
+    <div class="bot-prof-img"><%= image_tag "nolanbot.JPG" %></div>
   </div>
 </div>
           

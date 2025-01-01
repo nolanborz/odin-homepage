@@ -22,8 +22,51 @@ body {
   .grid-container-flex {
     padding: 2rem;
   }
+
+  .top-content {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .top-prof-img img {
+    width: 300px;
+  }
+
+  .program-icons {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1024px) {
+  .grid-container-flex {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .bot-prof-img img {
+    width: 300px;
+  }
 }
 /* mobile layout default stuff */
+
 .grid-container-flex {
   display: flex;
   flex-direction: column;
@@ -39,10 +82,32 @@ body {
 
 .top-top-section {
   position: relative;
+  overflow: hidden;
 }
+
+.top-top-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100px;  /* Extend beyond screen edge */
+  right: -100px;  /* Extend beyond screen edge */
+  height: 200%;
+  background: linear-gradient(170deg,
+  #3B82F6 33%,
+  rgba(59, 130, 246, 0.3) 33%,
+  transparent 34%
+  );
+  transform-origin: left;  /* Adjust angle as needed */
+  z-index: 0;  /* Places it behind content */
+}
+
+
 .top-prof-img {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
+
 
 }
 .top-prof-img img {
@@ -57,16 +122,27 @@ body {
   color: rgb(255, 255, 255);
   font-size: 3rem;
   margin-bottom: 0;
+  z-index: 1;
 }
 .my-name, .about-me-text {
   font-family: 'Playfair Display', serif;
 }
 
+.about-me p {
+  text-align: left;
+  padding: 0 15px;
+}
 .about-me {
+  padding: 1rem;
+  text-align: center;
   align-items: center;
 }
 .program-icons {
   display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 1rem;
+
 }
 .icons {
   max-height: 30px;
@@ -77,6 +153,13 @@ body {
   max-width: 30px;
 }
 
+.projects-header {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0px;
+}
+.projects {
+  padding: 1rem;
+}
 .project-sample {
   height: 350px;
   width: 300px;
@@ -109,15 +192,46 @@ body {
   padding-right: 15px;
 }
 
+.sample-bot-text p {
+  padding: 10px;
+}
+
 .contact-sections {
   display: flex;
+  justify-content: left;
   align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem;
 }
 .contact-icon {
   height: 30px;
   width: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.sns-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.bot-prof-img {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+
 }
 .bot-prof-img img {
   width: 200px;
   height: auto;
+}
+
+.bottom-content {
+  text-align: left;
+  padding: 1rem;
 }

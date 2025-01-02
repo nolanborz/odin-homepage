@@ -2,7 +2,7 @@ body {
   background-color: rgb(86, 127, 86);
   font-family: 'Roboto', sans-serif;
 }
-.my-name, .about-me-text {
+.my-name, .about-me-text, h1 {
   font-family: 'Playfair Display', serif;
 }
 
@@ -82,6 +82,7 @@ h1 {
   justify-content: center;
   gap: 15px;
   padding: 0;
+  margin-top: 1rem;
 }
 .icons {
   max-height: 30px;
@@ -197,7 +198,7 @@ footer {
 /*tablet users */
 @media (min-width: 768px) {
   .intro {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas: "pic name" "pic about";
     gap: 1rem;
   }
@@ -241,8 +242,42 @@ footer {
     grid-column: 1 / -1; /* Spans from first to last column */
   }
 }
+
+footer.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "contact pic" "contact pic";
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.bot-profile-img {
+  grid-area: pic;
+  min-width: 275px;
+  max-width: 300px;
+  height: auto;
+  align-self: start;
+}
+
+.sns-icons {
+  margin-top: 2rem;
+  justify-content: start;
+}
+
 /* end of tablet users */
 /* desktop users */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+  .projects {
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: auto repeat(2, 350px); /* First row auto for header, then 3 rows at 350px */
+    justify-content: center;
+  }
 
+  .contact-content {
+    margin-left: 4rem;
+  }
+
+  .bot-profile-img {
+    margin-left: 2rem;
+  }
 }

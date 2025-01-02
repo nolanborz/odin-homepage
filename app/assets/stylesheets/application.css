@@ -76,6 +76,8 @@ h1 {
 }
 .about-me {
   margin-top: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
   padding: 0;
   text-align: center;
   align-items: center;

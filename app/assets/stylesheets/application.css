@@ -8,6 +8,18 @@ body {
 
 /* mobile layout aka default styles*/
 
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -88,9 +100,9 @@ h2 {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-columns: 1fr;
   gap: 2rem;
-  justify-content: center;
+  justify-items: center;
   margin: 0;
   padding: 0;
 }
@@ -99,7 +111,9 @@ h2 {
   height: 350px;
   width: 300px;
   background-color:antiquewhite;
-  border: black 2px dotted;
+  border: black 2px solid;
+  border-radius: 5px;
+  grid-template-rows: 200px 1fr;
 }
 
 .project-icons {
@@ -126,6 +140,7 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+
 .sample-bot-header {
   display: flex;
   align-content: center;
@@ -177,4 +192,57 @@ footer {
   align-self: center;
   width: 300px;
   height: auto;
+}
+/*end of mobile users*/
+/*tablet users */
+@media (min-width: 768px) {
+  .intro {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "pic name" "pic about";
+    gap: 1rem;
+  }
+
+  .prof-pic-div {
+    grid-area: pic;
+  }
+
+  .my-name {
+    grid-area: name;
+    align-content: center;
+  }
+
+  .my-name::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: antiquewhite;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%);
+    z-index: -1;
+  }
+
+  .about-me {
+    grid-area: about;
+  }
+
+  .about-me p {
+    margin-top: 1rem;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: auto repeat(3, 350px); /* First row auto for header, then 3 rows at 350px */
+    justify-content: center;
+  }
+
+  .projects h2 {
+    grid-column: 1 / -1; /* Spans from first to last column */
+  }
+}
+/* end of tablet users */
+/* desktop users */
+@media (min-width: 768px) {
+
 }
